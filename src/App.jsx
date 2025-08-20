@@ -77,7 +77,7 @@ const App = () => {
     {
       title: 'HireJobs',
       description: 'A modern job portal built with React.js and Firebase, helping job seekers explore and apply for opportunities seamlessly.',
-      tech: ['React.js', 'Tailwind CSS', 'Firebase'],
+      tech: ['React.js', 'Tailwind CSS', 'Firebase' , 'React Router', 'Axios' , 'Firebase Authentication' , 'Firebase hosting'],
       github: 'https://github.com/Sumitvi/hirejobs',
       live: 'https://hirejobs-two.vercel.app/',
       image: Jobs,
@@ -85,7 +85,7 @@ const App = () => {
     {
       title: 'ChatApp - Group Chat',
       description: 'A real-time group chat application using Spring Boot for the backend, React for the frontend, and WebSockets for messaging.',
-      tech: ['Spring Boot', 'React.js', 'WebSocket', 'MongoDB'],
+      tech: ['Spring Boot', 'React.js', 'WebSocket', 'MongoDB' , 'Tailwind CSS', 'Axios', 'React Router', 'Spring Data JPA'],
       github: 'https://github.com/Sumitvi/NewChatApp',
       live: '#',
       image: 'https://placehold.co/600x400/1e293b/94a3b8?text=ChatApp',
