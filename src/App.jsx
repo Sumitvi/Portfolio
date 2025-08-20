@@ -13,6 +13,11 @@ const FiExternalLink = () => <svg stroke="currentColor" fill="none" strokeWidth=
 const FiMenu = () => <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>;
 const FiX = () => <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>;
 const FiBriefcase = () => <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>;
+const FiMail = () => <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>;
+const CodolioIcon = () => <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M12.012,2.25C6.486,2.25,2.02,6.716,2.02,12.242s4.467,9.992,9.992,9.992s9.992-4.467,9.992-9.992S17.538,2.25,12.012,2.25z M12.012,20.417c-4.505,0-8.159-3.654-8.159-8.159c0-4.505,3.654-8.159,8.159-8.159c4.505,0,8.159,3.654,8.159,8.159C20.171,16.763,16.517,20.417,12.012,20.417z M11.22,8.235l-3.963,3.963l3.963,3.963l1.585-1.585l-2.378-2.378l2.378-2.378L11.22,8.235z M15.182,12.198l-1.585,1.585l2.378,2.378l-1.585,1.585l3.963-3.963L15.182,12.198z"></path></svg>;
+const FiAward = () => <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 17 17 23 15.79 13.88"></polyline></svg>;
+const FiUsers = () => <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>;
+
 
 // --- Reusable Components ---
 const Section = ({ id, children }) => (
@@ -277,17 +282,40 @@ const App = () => {
         <Section id="about">
           <div>
             <SectionTitle>About <span className="text-cyan-400">Me</span></SectionTitle>
-            <div className="max-w-4xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
               <motion.div 
-                className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-lg border border-slate-700 text-center"
+                className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-lg border border-slate-700"
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
               >
+                <h3 className="text-2xl font-bold text-white mb-4">A Passionate Developer from Jabalpur</h3>
                 <p className="text-slate-400 leading-relaxed text-lg">
-                  Hello! I'm Sumit, a passionate Computer Science student and developer from Jabalpur. I have a strong foundation in Java, Spring Boot, and React, and I enjoy building scalable solutions. As an active member of coding communities and a Google Developer Student Club Lead, I love collaborating, mentoring, and engaging in tech discussions.
+                  Hello! I'm Sumit, a passionate Computer Science student with a strong foundation in Java, Spring Boot, and React. I thrive on building scalable, real-world solutions and enjoy every aspect of the development process, from concept to deployment.
                 </p>
+              </motion.div>
+              <motion.div 
+                className="space-y-6"
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                <div className="flex items-start gap-4 p-4 bg-slate-800/30 rounded-lg">
+                  <FiUsers className="text-cyan-400 text-3xl mt-1"/>
+                  <div>
+                    <h4 className="font-bold text-white text-lg">Community Leader</h4>
+                    <p className="text-slate-400">As a Google Developer Student Club Lead, I love collaborating, mentoring, and fostering a passion for technology in others.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 p-4 bg-slate-800/30 rounded-lg">
+                  <FiAward className="text-cyan-400 text-3xl mt-1"/>
+                  <div>
+                    <h4 className="font-bold text-white text-lg">Hackathon Winner</h4>
+                    <p className="text-slate-400">Active participant and winner in multiple hackathons, always eager to solve challenging problems under pressure.</p>
+                  </div>
+                </div>
               </motion.div>
             </div>
           </div>
@@ -397,20 +425,26 @@ const App = () => {
         <Section id="contact">
           <div className="text-center">
             <SectionTitle>Get In <span className="text-cyan-400">Touch</span></SectionTitle>
-            <p className="text-lg text-slate-400 max-w-2xl mx-auto mb-8">
+            <p className="text-lg text-slate-400 max-w-2xl mx-auto mb-12">
               I'm currently looking for new opportunities. Whether you have a project in mind or just want to connect, feel free to reach out! My inbox is always open.
             </p>
-            <motion.a
-              href="mailto:sumitvish196@gmail.com"
-              className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold py-3 px-8 rounded-full inline-block mb-12 shadow-lg shadow-cyan-500/20"
-              whileHover={{ scale: 1.05, y: -5, boxShadow: '0 10px 20px rgba(0, 255, 255, 0.25)' }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Say Hello
-            </motion.a>
-            <div className="flex justify-center space-x-6">
-              <motion.a href="https://github.com/Sumitvi" target="_blank" rel="noopener noreferrer" whileHover={{ y: -3, color: '#2dd4bf' }} className="text-slate-400 text-2xl"><FiGithub /></motion.a>
-              <motion.a href="#" whileHover={{ y: -3, color: '#2dd4bf' }} className="text-slate-400 text-2xl"><FiLinkedin /></motion.a>
+            <div className="flex justify-center flex-wrap gap-6">
+              <motion.a href="https://github.com/Sumitvi" target="_blank" rel="noopener noreferrer" whileHover={{ y: -3 }} className="text-slate-400 hover:text-cyan-400 transition-colors flex flex-col items-center gap-2">
+                <FiGithub size={32} />
+                <span className="text-sm">GitHub</span>
+              </motion.a>
+              <motion.a href="https://www.linkedin.com/in/sumit-vishwakarma-9b0a7b271/" target="_blank" rel="noopener noreferrer" whileHover={{ y: -3 }} className="text-slate-400 hover:text-cyan-400 transition-colors flex flex-col items-center gap-2">
+                <FiLinkedin size={32} />
+                <span className="text-sm">LinkedIn</span>
+              </motion.a>
+              <motion.a href="mailto:sumitvish196@gmail.com" whileHover={{ y: -3 }} className="text-slate-400 hover:text-cyan-400 transition-colors flex flex-col items-center gap-2">
+                <FiMail size={32} />
+                <span className="text-sm">Email</span>
+              </motion.a>
+              <motion.a href="https://codolio.com/profile/SumitVishwakarma" target="_blank" rel="noopener noreferrer" whileHover={{ y: -3 }} className="text-slate-400 hover:text-cyan-400 transition-colors flex flex-col items-center gap-2">
+                <CodolioIcon size={32} />
+                <span className="text-sm">Codolio</span>
+              </motion.a>
             </div>
           </div>
         </Section>
